@@ -38,7 +38,7 @@ class Advertisement(models.Model):
     def images(self):
         if self.image:
             return format_html(
-                '<img src=self.image.url, width=20, height=20>', self.image
+                '<img src={}.url, width=20, height=20>', self.image
             )
 
     def __str__(self):
